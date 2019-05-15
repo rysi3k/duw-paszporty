@@ -9,7 +9,7 @@ const pushMeToken = process.env.PUSH_ME_TOKEN || ''
 
 try {
 (async () => {
-  const browser = await puppeteer.launch({devtools: true, headless: false})
+  const browser = await puppeteer.launch({devtools: false, headless: true})
   const page = await browser.newPage()
   await page.setViewport({ width: 1440, height: 789 })
   
